@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemoryKeeper - Save Stories, Sharpen Minds</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pop-bg': '#FFF9F0',
+                        'pop-orange': '#FF9600',
+                        'pop-orange-shadow': '#CC7700',
+                        'pop-blue': '#4DA6FF',
+                        'pop-blue-shadow': '#2980B9',
+                        'pop-green': '#58CC02', 
+                        'pop-green-shadow': '#46A302',
+                        'pop-purple': '#CE82FF',
+                        'pop-purple-shadow': '#A655D9',
+                        'pop-text': '#4B4B4B',
+                    },
+                    fontFamily: {
+                        'display': ['"Fredoka"', 'cursive'],
+                        'body': ['"Nunito"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'comic': '0px 4px 0px 0px #E5E7EB',
+                        'comic-hover': '0px 6px 0px 0px #E5E7EB',
+                        'orange': '0px 5px 0px 0px #CC7700',
+                        'blue': '0px 5px 0px 0px #2980B9',
+                        'green': '0px 5px 0px 0px #46A302',
+                        'purple': '0px 5px 0px 0px #A655D9',
+                        'card': '0px 8px 0px 0px rgba(0,0,0,0.05)',
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce-slow 3s infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                        'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        'bounce-slow': {
+                            '0%, 100%': { transform: 'translateY(-5%)' },
+                            '50%': { transform: 'translateY(5%)' },
+                        },
+                        'wiggle': {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .btn-pop:active {
+            transform: translateY(4px);
+            box-shadow: none !important;
+        }
+        .bg-dots {
+            background-image: radial-gradient(#E5E7EB 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-pop-bg font-body text-pop-text overflow-x-hidden antialiased">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
